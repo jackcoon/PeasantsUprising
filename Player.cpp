@@ -3,8 +3,7 @@
   #define Player
 #end if
 
-int main() {
-  
-  return 1
+Player() {
+
 }
 
