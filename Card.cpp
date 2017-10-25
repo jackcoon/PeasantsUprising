@@ -1,5 +1,5 @@
 #if !defined Card
-  #include Card.h
+  #include ./Card.h
   #define Card
 #end if
 
