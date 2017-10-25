@@ -3,5 +3,6 @@ class Point{
     int x;
     int y;
     
+    Point();
     Point(int X, int Y);
 };
