@@ -3,8 +3,13 @@
   #define Point
 #end if
 
-int main() {
-  
-  return 1
+Point() {
+  x = 0;
+  y = 0;
+}
+
+Point(int X, int Y) {
+  x = X;
+  y = Y;
 }
 
