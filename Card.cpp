@@ -1,9 +1,5 @@
-#if !defined Card
-  #include ./Card.h
-  #define Card
-#end if
+#include "./Card.h"
 
-int main() {
-  
-  return 1
+Card::Card() {
+
 }

@@ -1,9 +1,6 @@
-#if !defined Peasants
-  #include ./PeasantsUprising.h
-  #define Peasants
-#end if
+#include "./PeasantsUprising.h"
 
 int main() {
-  
-  return 1
+	
+	return 1;
 }

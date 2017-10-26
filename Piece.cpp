@@ -1,10 +1,6 @@
-#if !defined Piece
-  #include ./Piece.h
-  #define Piece
-#end if
+#include "./Piece.h"
 
-int main() {
-  
-  return 1
+Piece::Piece() {
+
 }
 

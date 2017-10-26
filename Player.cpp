@@ -1,9 +1,6 @@
-#if !defined Player
-  #include ./Player.h
-  #define Player
-#end if
+#include "Player.h"
 
-Player() {
+Player::Player() {
 
 }
 
