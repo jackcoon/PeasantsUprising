@@ -5,8 +5,8 @@ class Point{
 private:
 	
 public:
-	int x;
-	int y;
+	int x; //Alpha characters
+	int y; //Numeric characters
     
 	Point();
 	Point(int X, int Y);
