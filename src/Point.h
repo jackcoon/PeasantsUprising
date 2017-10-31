@@ -10,6 +10,8 @@ public:
     
 	Point();
 	Point(int X, int Y);
+	bool Equals(Point tip);
+	bool onBoard();
 };
 
 #endif
