@@ -13,17 +13,18 @@ class Piece {
 private:
 	Point pos;
 public:
-	enum Type { king, queen, bishop, rook, knight, pawn};
+	enum Type {king, queen, bishop, rook, knight, pawn};
 
 	char symb;
 	string name;
 	Type bit;
 	bool isHuman;
 	
-	Piece(Type , int x, int y, bool isHuman);
+	Piece(Type type, int x, int y, bool isHuman);
 	void move(int x, int y);
 	Point* determineMoveSet(Piece **playerPieces);
 	Point getPos();
+ 	bool danger(Piece **playerPieces, Point tip);
 };
 
 #endif

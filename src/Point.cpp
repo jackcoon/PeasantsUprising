@@ -10,13 +10,14 @@ Point::Point(int X, int Y) {
   y = Y;
 }
 
-bool Point::Equals(Point tip) {
+bool Point::equals(Point tip) {
 	if (x != tip.x)
 		return false;
 	return y == tip.y;
 }
 
-bool Point::onBoard() {
+bool Point::onBoard() {//checks if a point is on the board
 	return !(x < 0 || x > 7 || y < 0 || y > 7);
 }
+
 
