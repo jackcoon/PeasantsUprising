@@ -2,8 +2,9 @@
 #define PIECE_H
 
 #include "Point.h"
-#include "Player.h"
+#include "Player.h"	
 #include <string>
+#include "Enumerations.h"
 
 using namespace std;
 
@@ -13,7 +14,6 @@ class Piece {
 private:
 	Point pos;
 public:
-	enum Type {king, queen, bishop, rook, knight, pawn};
 
 	char symb;
 	string name;
@@ -22,9 +22,10 @@ public:
 	
 	Piece(Type type, int x, int y, bool isHuman);
 	void move(int x, int y);
-	Point* determineMoveSet(Piece **playerPieces);
+	Point* determineMoveSet(Piece ***playerPieces);
 	Point getPos();
- 	bool danger(Piece **playerPieces, Point tip);
+ 	bool danger(Piece ***playerPieces, Point tip);
+	bool discoverCheck(Piece ***playerPieces, Point tryMove);
 };
 
 #endif

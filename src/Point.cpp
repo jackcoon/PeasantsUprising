@@ -1,5 +1,7 @@
 #include "./Point.h"
 
+using namespace std;
+
 Point::Point() {
   x = 0;
   y = 0;
@@ -20,4 +22,6 @@ bool Point::onBoard() {//checks if a point is on the board
 	return !(x < 0 || x > 7 || y < 0 || y > 7);
 }
 
-
+void Point::print() {
+	cout<<"("<<x<<", "<<y<<")\n";
+}

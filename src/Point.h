@@ -1,6 +1,8 @@
 #ifndef POINT_H
 #define POINT_H
 
+#include <iostream>
+
 class Point{
 private:
 	
@@ -12,6 +14,7 @@ public:
 	Point(int X, int Y);
 	bool equals(Point tip);
 	bool onBoard();
+	void print();
 };
 
 #endif
