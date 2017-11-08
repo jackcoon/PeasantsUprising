@@ -1,4 +1,4 @@
-all: Test.out
+all: Test.out cleanAll
 
 Test.out: Test.o Piece.o Point.o
 	g++ Test.o Piece.o Point.o -o Test.out
@@ -15,3 +15,5 @@ Point.o: Point.cpp
 clean:
 	rm -rf *o hello
 
+cleanAll:
+	rm -rf *o
