@@ -19,7 +19,7 @@ int main()
 	for (int i = 0; i < 16; i++)
 		playerPieces[1][i] = new Piece(pawn, -1, -1, false);
 	//playerPieces[0][12] = new Piece(pawn, 4, 5, true);
-	playerPieces[1][2] = new Piece(rook, 1, 3, false);
+	playerPieces[1][2] = new Piece(rook, 2, 3, false);
 	//playerPieces[1][4] = new Piece(bishop, 1, 3, false);
 	//playerPieces[1][12] = new Piece(pawn, 2, 4, false);
 	//playerPieces[1][6] = new Piece(knight, 2, 3, false);

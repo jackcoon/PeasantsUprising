@@ -416,18 +416,19 @@ Point* Piece::determineMoveSet(Piece ***playerPieces) {
 		break;
 	case pawn://Finds all possible places that pawn can move and then deletes invalid ones
 		possible = new Point[3];
-		possible[0] = Point(pos.x - 1, pos.y + (isHuman ? 1 : -1));
-		possible[1] = Point(pos.x + 1, pos.y + (isHuman ? 1 : -1));
-		possible[2] = Point(pos.x, pos.y + (isHuman ? 1 : -1));
-
-		for (int i = 0; i < 16; i++)
-			for (int j = 0; j < 3; j++) {
-				if (!(possible[j].onBoard() && !playerPieces[!isHuman][i]->getPos().equals(possible[j]) && !discoverCheck(playerPieces, possible[j])))
-					possible[j] = Point(-1, -1);
-				else if (j == 2 && !playerPieces[isHuman][i]->getPos().equals(possible[j]))
-					possible[j] = Point(-1, -1);
+		for (int i = 0; i < 4; i++)
+			possible[i] = Point(-1, -1);
+		ctr = 0;
+		for (int k = 0; k <= 1; k++)
+			for (int j = 0; j < 16; j++)
+				for (int z = -1; z <= 1; z++) {
+					temp = Point(pos.x + z, pos.y + (isHuman ? 1 : -1));
+					if (!(temp.equals(playerPieces[k][j]->getPos())))
+						possible[ctr++] = temp;
+					else if	(z == 0 && playerPieces[isHuman][j]->getPos().equals(temp))
+						possible[ctr++] = temp;
 			}
-		break;
+		break;		
 	}
 	return possible;
 }
