@@ -13,6 +13,7 @@ class Piece {
 
 private:
 	Point pos;
+	bool knightCheck(Piece ***playerPieces, Point tip);
 public:
 
 	char symb;
