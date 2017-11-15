@@ -38,5 +38,12 @@ Player::Player(bool isHuman) {
 	*playerPieces[1][14] = Piece(pawn, 6, 6, false);
 	*playerPieces[1][15] = Piece(pawn, 7, 6, false);
 	}
+	int getScore() {
+		return score;
+	}
+	void setScore(bool isHuman){
+		
+	}
+	
 }
 
