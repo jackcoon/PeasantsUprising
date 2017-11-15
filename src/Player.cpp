@@ -1,6 +1,8 @@
 #include "Player.h"
 
-Player::Player() {
+Player::Player(bool isHuman) {
+	
+	if(isHuman == true) {
 	*playerPieces[0][0] = Piece(rook, 0, 0, true);
 	*playerPieces[0][1] = Piece(knight, 1, 0, true);
 	*playerPieces[0][2] = Piece(bishop, 2, 0, true);
@@ -17,7 +19,8 @@ Player::Player() {
 	*playerPieces[0][13] = Piece(pawn, 5, 1, true); 
 	*playerPieces[0][14] = Piece(pawn, 6, 1, true);
 	*playerPieces[0][15] = Piece(pawn, 7, 1, true);
-
+	}
+	else {
 	*playerPieces[1][0] = Piece(rook, 0, 7, false);
 	*playerPieces[1][1] = Piece(knight, 1, 7, false);
 	*playerPieces[1][2] = Piece(bishop, 2, 7, false);
@@ -34,5 +37,6 @@ Player::Player() {
 	*playerPieces[1][13] = Piece(pawn, 5, 6, false); 
 	*playerPieces[1][14] = Piece(pawn, 6, 6, false);
 	*playerPieces[1][15] = Piece(pawn, 7, 6, false);
+	}
 }
 
